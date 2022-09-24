@@ -17,26 +17,26 @@ var mayor = 100;
 var menor = 1;
 let aleatorio = Math.trunc(Math.random() * (mayor - menor) + menor);
 alert("El númerop es " + aleatorio);
-introduceNum();
-function introduceNum( ){
-   let num = prompt("Introduce un número mayor de " + mayor + " y menor de " + menor +":" );
+let num = prompt("Introduce un número mayor de " + menor + " y menor de " + mayor +":" );
+introduceNum(num);
+function introduceNum(num ){
+
 
    if( isNaN(num)){
     alert("No has introducido un número valido, intentalo de nuevo.");
    }else{
     if( num == aleatorio){
-
-        alert("Has acertado el número es el " + aleatorio + ", el juego ha terminado.");
+        document.write("Has acertado el número es el " + aleatorio + ", el juego ha terminado.");
        }else if( num < aleatorio){
         menor  =  num;
-
-        alert("El número es mayor, intentalo de nuevo, el número esta entre.");
-        introduceNum();
+ 
+        num = prompt("El número es mayor, intentalo de nuevo esta entre, " + menor + " y " + mayor +":" );
+        introduceNum(num);
        }else if( num > aleatorio){
         mayor = num;
 
-        alert("El número es menor, intentalo de nuevo, el número esta entre.");
-        introduceNum();
+        num = prompt("El número es menor, intentalo de nuevo esta entre, " + menor + " y " + mayor +":" );
+        introduceNum(num);
        }
    }
 
