@@ -13,5 +13,13 @@ Se quedará en blanco.
 - La aplicación escribirá un triángulo con tantos asteriscos como indique el número de usuario.
 - Para que el efecto sea más efectivo utilizaremos, para escribir los asteriscos, una letra monoespaciada.
 */
-let num = window.prompt("Intruce un número positivo: ")
-document.write(" *");
+let num = window.prompt("Intruce un número positivo de altura triangulo: ");
+
+for(let i = 0; i < num; i++){
+    document.write("<p>");
+    for(let j = 0; j <= i; j++){
+        document.write("* ");
+    }
+    document.write("</p>");
+}
+
