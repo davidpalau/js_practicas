@@ -14,4 +14,4 @@
   // añade el elemento creado y su contenido al DOM
   var currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
-  
+newDiv.style.backgroundColor = '#FF00FF'
