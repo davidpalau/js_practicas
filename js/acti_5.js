@@ -15,14 +15,14 @@ lo que indican los siguientes puntos)
 ▪ Para mayores de 45 años sube un 15%
 */
 //Introdución de datos personales.
-let nombre = parseInt(window.prompt("Introduce tu nombre: "));
-let apellidos = parseInt(window.prompt("Introduce tu primer aplellido: "));
-let apellidos_2 = parseInt(window.prompt("Introduce tu sergundo aplellido: "));
+let nombre = window.prompt("Introduce tu nombre: ");
+let apellidos = window.prompt("Introduce tu primer aplellido: ");
+let apellidos_2 = window.prompt("Introduce tu sergundo aplellido: ");
 let salario = parseInt(prompt("Introduce tu salario, en número decicmales: "));
 let edad = parseInt(prompt("Introduce tu edad."));
 // Muestra nombre y apellidos, no muestra edad no es necesario
 document.write("<p>Nombre: "+ nombre +".</p>");
-document.write("<p>Apellidos: " + apellidos +" " + apellidos_2 +".</p>")
+document.write("<p>Apellidos: " + apellidos +" " + apellidos_2 +".</p>");
 //Segun el caso muestra el nuevo salario
 if(salario > 2000){
     //Salario superior a 2000€ no cambia
