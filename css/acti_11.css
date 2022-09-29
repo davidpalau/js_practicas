@@ -1,5 +1,5 @@
 div{
-    border: 5px solid darkblue;
+    position: absolute;
     height: 50px;
     width: 50px;
 }
