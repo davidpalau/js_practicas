@@ -1,0 +1,12 @@
+td{
+
+    width: 5em;
+    text-align: center;
+    
+}
+table{
+    border-collapse: collapse;
+}
+td:nth-child(odd) {
+   background-color: aliceblue;
+  }

@@ -13,29 +13,47 @@ o Al final, si el juego se ha completado con éxito, el número de intentos es
 indicado
 o El usuario puede volver a jugar usando un cuadro de confirmación
 */
+
+
 var mayor = 100;
 var menor = 1;
+let intentos = 0;
 let aleatorio = Math.trunc(Math.random() * (mayor - menor) + menor);
 alert("El númerop es " + aleatorio);
 let num = prompt("Introduce un número mayor de " + menor + " y menor de " + mayor +":" );
-introduceNum(num);
-function introduceNum(num ){
+if(num == null){
+    document.write("Fín del juego.")
+}else{
+    intentos++;
+    introduceNum(num);
+}
 
+function introduceNum(num){
 
-   if( isNaN(num)){
+   if(isNaN(num)){
     alert("No has introducido un número valido, intentalo de nuevo.");
    }else{
     if( num == aleatorio){
-        document.write("Has acertado el número es el " + aleatorio + ", el juego ha terminado.");
+        alert("Has acertado en "+ intentos + " intentos, el número es el " + aleatorio + ", el juego ha terminado.");
+        let jugarMas = confirm("¿Quieres continuar jugando?")
+        if(jugarMas){
+            location.reload();
+            location.reload();
+            introduceNum(num);
+        }else{
+            document.write("Has reusado más partidas.");
+        }
        }else if( num < aleatorio){
         menor  =  num;
  
         num = prompt("El número es mayor, intentalo de nuevo esta entre, " + menor + " y " + mayor +":" );
+        intentos++;
         introduceNum(num);
        }else if( num > aleatorio){
         mayor = num;
 
         num = prompt("El número es menor, intentalo de nuevo esta entre, " + menor + " y " + mayor +":" );
+        intentos++;
         introduceNum(num);
        }
    }
