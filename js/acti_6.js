@@ -14,7 +14,7 @@ indicado
 o El usuario puede volver a jugar usando un cuadro de confirmación
 */
 
-
+window.addEventListener('load', function() {
 var mayor = 100;
 var menor = 1;
 let intentos = 0;
@@ -38,10 +38,8 @@ function introduceNum(num){
         let jugarMas = confirm("¿Quieres continuar jugando?")
         if(jugarMas){
             location.reload();
-            location.reload();
-            introduceNum(num);
         }else{
-            document.write("Has reusado más partidas.");
+            document.write("Has reusado a jugar más partidas.");
         }
        }else if( num < aleatorio){
         menor  =  num;
@@ -61,5 +59,5 @@ function introduceNum(num){
 //prueba commit 
 
 }
-
+});
 
